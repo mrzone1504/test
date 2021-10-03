@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> <!-- định dạng trang web -->
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> <!-- chế độ xem theo giao diện thiết bị -->
+        <title>Form Web</title> <!-- tên trang web  -->
+        <link rel="stylesheet" href="Form-2.css"> <!-- đường dẫn file css -->
+    </head>
+    
+    <body>
+    <header> <!-- đây là phần header của trang -->
+        <nav class="content"> <!-- tạo thẻ nav chứa các thông tin phần header -->
+            <a href=""><img src="img-web/logo1.png"></a> <!-- logo trang web -->
+            <div class="menu"> <!-- thẻ div chứa các phần tử navigation -->
+                <ul> <!-- tạo danh sách các phần tử navigation -->
+                    <li><a href="project.html"> <b>Trang Chủ</b> </a></li>
+                    <li><a href="https://hotro.garena.vn/"> <b>Hổ trợ</b> </a></li> <!-- các phần tử của thanh navigation  -->
+                    <li><a href="https://lienminh.garena.vn/download"> <b>Tải Game</b> </a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main> <!-- phần nội dung trang web -->
+        <div class="container"> <!-- dùng thẻ div chứa form đăng ký  -->
+                <h2>Đăng Ký Tài Khoản</h2> <!-- tiêu đề chính của phần nội dung -->
+            <form id="form" class="form"> <!-- tạo form -->
+                <div class="form-control"> <!-- thẻ div chứa thành phần thứ nhất trong form đăng ký -->
+                    <label for="username">Tên Đăng Nhập</label> <!-- tên thành phần thứ nhất -->
+                    <input type="text" placeholder="abckyng17" id="username" name="nameField" /> <!-- phần input dạng text trong thành phần thứ nhất  -->
+                    <small>Error message</small> <!-- thông báo lỗi trong thành phần thứ nhất -->
+                </div>
+
+                <div class="form-control"> <!-- thẻ div chứa thành phần thứ hai trong form đăng ký -->
+                    <label for="username">Email</label> <!-- tên thành phần thứ hai -->
+                    <input type="email" placeholder="abc@gmail.com" id="email" name="emailField"/> <!-- phần input dạng email trong thành phần thứ hai -->
+                    <small>Error message</small> <!-- thông báo lỗi trong thành phần thứ hai -->
+                </div>
+
+                <div class="form-control"> <!-- thẻ div chứa thành phần thứ ba trong form -->
+                    <label for="username">Mật Khẩu</label> <!-- tên thành phần thứ ba -->
+                    <input type="password" placeholder="Password" id="password" name="passwordField"/> <!-- phần input kiểu password trong thanh phần thứ ba -->
+                    
+                    <small>Error message</small> <!-- thông báo lỗi trong thành phần thứ ba -->
+                </div>
+
+                <div class="form-control"> <!-- thẻ div chứa thành phần thứ tư trong form -->
+                    <label for="username">Nhập Lại Mật Khẩu</label> <!-- tên thành phần -->
+                    <input type="password" placeholder="Password check" id="password2" name="password2Field"/> <!-- phần input dạng password trong thành phần thứ tư  -->
+        
+                    <small>Error message</small> <!-- thông báo lỗi trong thành phần thứ tư -->
+                </div>
+                <div class="check">
+                <input type="checkbox" class="checkbox" id="checkbox" required> <!-- tạo checkbox để kiểm tra điều khoản trang web -->
+                <label for="checkbox">Tôi đồng ý với <a href="">Chính Sách Bảo Mật</a> và <a href=""> Điều Khoản Dịch Vụ</a> </label> <!-- tên checkbox kiểm tra điều khoản -->
+                </div>
+                
+                <button type="submit">Đăng ký</button> <!-- nút submit đăng ký form -->
+
+
+            </form>
+        </div>
+    </main>
+    <footer > <!-- phần footer trang web  -->
+        <div class="rear"> <!-- tạo thẻ div chứa thông tin cần thiết -->
+            <img src="img-web/logo2.png" style="width: 70px; height: 30px;" > <!-- logo của nhà sản xuất -->
+            <img src="img-web/logo3.png" style="width: 60px; height: 70px;"><br><!-- logo của nhà phát triển  -->
+            <p>2020 Riot Games, Inc.</p> <!-- thông tin chú thích -->
+            <p>Công Ty Cổ Phần VNG Địa chỉ: Lô 03b-04-05-06-07, đường số 13, khu Công Nghiệp, khu <br>Chế Xuất Tân Thuận, phường Tân Thuận Đông, Quận 7, TP.HCM</p><br> <!-- thông tin chú thích -->
+            <dl> <!-- danh sách các phần tử footer -->
+                <dt>Chính Sách Bảo Mật</dt>
+                <dt>Điều Khoảng Sử Dụng</dt>
+                <dt>Điều Khoảng Sử Dụng (VNG)</dt> <!-- các phần tử  -->
+                <dt>Tùy chọn Cookies</dt>
+            </dl>
+        </div>
+    </footer>
+    <script src="Form-2.js"></script> <!-- đường dẫn đến file js của trang -->
+    </body>
+</html>

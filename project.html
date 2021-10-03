@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+        <title> Website Design </title>  <!--   tên trang web -->
+        <link rel="stylesheet" href="style.css">  <!-- đường dẫn đến css-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- đường dẫn mã code bootsrap/css -->
+    </head>
+    <body>
+        <header class="container" id="home"> <!-- phần header của trang web -->
+            <nav> <!--dùng thẻ nav để lưu phần logo va navigation-->
+                <a href=""><img src="img-web/logo1.png"></a> <!-- đường dẫn logo trang web -->
+                <div class="nagative" id="menu"> <!-- thẻ chứa các phần tử navigation -->
+                    <i class="fa fa-times" onclick="hide()"></i> <!-- hide sự kiện js của thanh điều hướng -->
+                    <ul>
+                        <li><a href="#home"><b>Trang Chủ</b> </a></li>
+                        <li><a href="#vd1"> <b>Khám Phá</b></a></li>
+                        <li><a href="#vd2"> <b>Tin Tức</b></a></li> <!-- các phần tử navigation -->
+                        <li><a href="#vd3"> <b>Tướng</b></a></li>
+                        <li><a href="https://hotro.garena.vn/"> <b>hỗ trợ</b> </a></li>
+                    </ul>
+                </div>
+                <i class="fa fa-bars" onclick="show()"></i> <!-- show sự kiện js -->
+            </nav>
+            <div class="content"> <!-- tạo thẻ chứa nội dung phần header -->
+                <h1>Welcome to League of legends</h1> <!-- phần tử h1 -->
+                <p><b>Liên Minh Huyền Thoại hiện đã có mặt trên di động. Chơi miễn phí ngay! Trò chơi sẽ sớm ra mắt trên CONSOLE.</b></p> <!-- phần tử đoạn văn bản -->
+                 <div> <!-- thẻ div chứa 2 nút button để download theo 2 loại hệ điều hành điện thoại -->
+                     <button type="button" style="font-size: large;">Google Play</button> <!-- nút button android -->
+                     <button type="button" style="font-size: large;">AppStore</button> <!-- nút button ios -->
+                 </div>
+            </div>
+        </header>
+        <main> <!-- phần thân của trang web -->
+            <section class="mainp0" id="vd1"> <!-- section chứa phần nội dung thứ nhất của main  -->
+                    <div class="col-1"> <!-- tạo thẻ div chứa phần thứ nhất của nội dung thứ nhất  -->
+                        <h1>TÌM HIỂU CƠ BẢN</h1> <!-- thẻ h1 -->
+                        <p><b>Có rất nhiều thứ bạn cần học hỏi và tìm hiểu trong Liên Minh, vì vậy, hãy cùng bắt đầu với những thứ cốt lõi nhất. Khám phá hướng dẫn bên dưới để hiểu rõ hơn về chế độ chơi phổ biến nhất này.</b></p> <!-- phần văn bản chú thích -->
+                        <button class="button" style="font-size: large; font-family: Arial, Helvetica, sans-serif; color: rgb(70, 67, 67); background-color: rgb(233, 175, 89);"> <!-- định dạng một chút css cho button -->
+                        <a href="Form-2.html" style="text-decoration: none; color: rgb(19, 58, 65);">ĐĂNG KÝ NGAY ➤</a></button> <!-- tạo nút đăng ký liên kết đến trang trang thứ 2 trong cùng page-->
+                    </div>
+                    <div class="col-2"> <!-- tạo thẻ div thứ 2 để chứa phần thứ 2 trong nội dung thứ 1 -->
+                        <img src="img-web/lol.jpg"> <!-- thẻ lưu hình ảnh trong nội dung thứ nhất -->
+                    </div>
+            </section>
+            <section class="mainp1" id="vd2"> <!-- section chứa nội dung thứ hai trong main -->
+                <h1>❖ TIN TỨC MỚI NHẤT ❖</h1> <!-- thẻ h1 để lưu tiêu đề trong phần nội dung thứ hai -->
+                <div class="row"> <!-- dùng thẻ div để chứa những phần tử trong nội dung thứ hai -->
+                    <div class="mainp1-sol"> <!-- thẻ div thứ nhất -->
+                        <a href=""><img src="img-web/new1.jpg" class="img1"></a> <!-- hình ảnh thẻ thứ nhất -->
+                        <p>06-05-2021   </p> <!-- phần văn bản chú thích thời gian trong thẻ div thứ nhất -->
+                        <h2>BẬC THẦY ĐI SĂN</h2> <!-- tiêu đề chính trong thẻ div thứ nhất -->
+                        <p>Bản năng hoang dã? Hay sự tiến hóa của loài máu lạnh?Hãy chọn phe đế biết ai là kẻ đi săn và ai là con mồi.</p> <!-- phần văn bản chú thích về nội dung -->
+                    </div>
+                    <div class="mainp1-sol"> <!-- thẻ div thứ hai -->
+                        <a href=""><img src="img-web/new2.jpg" class="img1"></a> <!-- hình ảnh trong thẻ thứ 2 -->
+                        <p>02-04-2021</p> <!-- phần văn bản chú thích thời gian trong thẻ div thứ hai -->
+                        <h2>CẬP NHẬT VỀ VẤN ĐỀ TRAO ĐỔI TRẬN THẮNG (WIN TRADING)</h2> <!-- tiêu đề chính trong thẻ thứ 2 -->
+                        <P>Chúng tôi đang xử lý các hành vi trao đổi trận thắng và dàn xếp kết quả trận đấu.</P> <!-- phần chú thích nội dung trong thẻ thứ hai  -->
+                    </div>
+                    <div class="mainp1-sol"> <!-- thẻ div thứ ba -->
+                        <a href=""><img src="img-web/new3.jpg" class="img1"></a> <!-- hình ảnh trong thẻ thứ div thứ ba -->
+                        <p>02-04-2021</p> <!-- chú thích thời gian nội dung trong thẻ thứ ba -->
+                        <h2>ĐỘI NGŨ PHÁT TRIỂN: THIẾT KẾ BATTLE PASS CHO TỐC CHIẾN</h2> <!-- tiêu đề chính trong thẻ thứ ba  -->
+                        <p>Wild Pass sắp sửa được ra mắt! Hãy trò chuyện cùng trưởng bộ phận kinh doanh Tốc Chiến để hiểu rõ hơn về cách thức kiếm tiền của chúng tôi</p> <!-- phần chú thích nội dung -->
+                    </div>
+                    
+                </div> 
+                <button class="button" style="font-size: large; font-family: Arial, Helvetica, sans-serif; color: rgb(70, 67, 67); background-color: rgb(233, 175, 89);">XEM THÊM ➤</button> <!-- tạo nút button để đọc thêm thông tin của phần nội dung thứ hai trong main -->
+            </section>
+
+            <section class="mainp2" id="vd3"> <!-- section thứ ba trong phần main chứa những phần tử là các nhân vật game  -->
+                <h1>❖ CHỌN TƯỚNG CỦA BẠN ❖</h1>  <!-- tiêu đề chính trong section thứ ba  -->
+                <div class="row"> <!-- nhóm thứ nhất section 3 chứa các thông tin nhân vật -->
+                    <div class="mainp2-sol"> <!-- thẻ div chứa các thông tin về nhân vật thứ nhất trong nhóm thứ 1-->
+                        <img src="img-web/img1.jpg"> <!-- hình ảnh nhân vật thứ nhất trong nhóm thứ 1-->
+                        <h3>Akali</h3> <!-- tên nhân vật thứ nhất trong nhóm thứ 1-->
+                    </div>
+                    <div class="mainp2-sol"> <!-- thẻ div chứa các thông tin nhân vật thứ hai trong nhóm thứ 1-->
+                        <img src="img-web/img2.jpg"> <!-- hình ảnh nhân vật thứ hai trong nhóm thứ 1-->
+                        <h3>Jinx</h3> <!-- tên nhân vật thứ hai trong nhóm thứ 1-->
+                    </div>
+                    <div class="mainp2-sol">     <!-- thẻ div chứa thông tin nhân vật thứ ba trong nhóm thứ 1-->     
+                        <img src="img-web/img3.jpg"> <!-- hình ảnh nhân vật thứ ba trong nhóm thứ 1 -->
+                        <h3>Jarvan IV</h3> <!-- tên nhân vật thứ ba trong nhóm thứ 1-->
+                    </div>
+                    <div class="mainp2-sol"> <!-- thẻ div chứa thông tin nhân vật thứ 4 trong nhóm thứ 1-->
+                        <img src="img-web/img4.jpg"> <!-- hình ảnh nhân vật thứ 4 trong nhóm thứ 1-->
+                        <h3>Zed</h3> <!-- tên nhân vật thứ 4 trong nhóm thứ 1-->
+                    </div>
+                </div>
+                <div class="row"> <!-- nhóm thứ hai trong section 3 chứa các thông tin nhân vật -->
+                    <div class="mainp2-sol"> <!-- thẻ div chứa thông tin nhân vật thứ nhất trong nhóm thứ 2 -->
+                        <img src="img-web/img5.jpg"> <!-- hình ảnh nhân vật thứ nhất trong nhóm thứ 2-->
+                        <h3>Ashe</h3>  <!-- tên nhân vật thứ nhất trong nhóm thứ 2 -->
+                    </div>
+                    <div class="mainp2-sol">   <!-- thẻ div chứa các thông tin nhân vật thứ hai trong nhóm thứ 2 -->
+                        <img src="img-web/img6.jpg">  <!-- hình ảnh nhân vật thứ hai trong nhóm thứ 2-->
+                        <h3>Irelia</h3>  <!-- tên nhân vật thứ hai trong nhóm thứ 2-->
+                    </div>
+                    <div class="mainp2-sol">   <!-- thẻ div chứa thông tin nhân vật thứ ba trong nhóm thứ 2-->     
+                        <img src="img-web/img7.jpg">  <!-- hình ảnh nhân vật thứ ba trong nhóm thứ 2-->
+                        <h3>Riven</h3>  <!-- tên nhân vật thứ ba trong nhóm thứ 2-->
+                    </div>
+                    <div class="mainp2-sol">  <!-- thẻ div chứa thông tin nhân vật thứ 4 trong nhóm thứ 2-->
+                        <img src="img-web/img8.jpg">   <!-- hình ảnh nhân vật thứ 4 trong nhóm thứ 2-->
+                        <h3>Rengar</h3>  <!-- tên nhân vật thứ 4 trong nhóm thứ 2 -->
+                    </div>
+                </div>
+                <div class="row"> <!-- nhóm thứ ba trong section 3 chứa thông tin các nhân vật-->
+                    <div class="mainp2-sol"> <!-- thẻ div chứa thông tin nhân vật thứ nhất trong nhóm thứ 3 -->
+                        <img src="img-web/img9.jpg">  <!-- hình ảnh nhân vật thứ nhất trong nhóm thứ 3 -->
+                        <h3>Azir</h3>  <!-- tên nhân vật thứ nhất trong nhóm thứ 3 -->
+                    </div>
+                    <div class="mainp2-sol">  <!-- thẻ div chứa các thông tin nhân vật thứ hai trong nhóm thứ 3-->
+                        <img src="img-web/img10.jpg"> <!-- hình ảnh nhân vật thứ hai trong nhóm thứ 3 -->
+                        <h3>Ornn</h3>  <!-- tên nhân vật thứ hai trong nhóm thứ 3-->
+                    </div>
+                    <div class="mainp2-sol">  <!-- thẻ div chứa thông tin nhân vật thứ ba trong nhóm thứ 3-->   
+                        <img src="img-web/img11.jpg">  <!-- hình ảnh nhân vật thứ ba trong nhóm thứ 3 -->
+                        <h3>Nautilus</h3> <!-- tên nhân vật thứ ba trong nhóm thứ 3 -->
+                    </div> 
+                    <div class="mainp2-sol">   <!-- thẻ div chứa thông tin nhân vật thứ 4 nhóm thứ 3 -->
+                        <img src="img-web/img12.jpg">  <!-- hình ảnh nhân vật thứ 4 trong nhóm thứ 3 -->
+                        <h3>Yasuo</h3>  <!-- tên nhân vật thứ 4 trong nhóm thứ 3-->
+                    </div>
+                </div>
+                <button class="button" style="font-size: large; font-family: Arial, Helvetica, sans-serif; 
+                color: rgb(70, 67, 67); background-color: rgb(233, 175, 89);">KHÁM PHÁ ➤</button> <!-- nút button để xem thêm các thông tin về nhân vật khác -->
+                
+            </section>
+        </main>
+        
+        <footer > <!-- phần footer của trong web -->
+            <div class="rear"> <!-- thẻ div chứa thông tin cần có trong footer -->
+                <img src="img-web/logo2.png" style="width: 70px; height: 30px;" > <!-- logo nhà sản xuất game -->
+                <img src="img-web/logo3.png" style="width: 60px; height: 70px;"><br> <!-- logo nhà phát triển game tại vn -->
+                <p>2020 Riot Games, Inc.</p> <!-- phần chứa thông tin chú thích -->
+                <p>Công Ty Cổ Phần VNG Địa chỉ: Lô 03b-04-05-06-07, đường số 13, khu Công Nghiệp, khu <br>Chế Xuất Tân Thuận, phường Tân Thuận Đông, Quận 7, TP.HCM</p><br> <!-- phần chứa thông tin chú thích -->
+                <dl> <!-- tạo một danh sách các chỉ mục trong phân footer -->
+                    <dt>Chính Sách Bảo Mật</dt>
+                    <dt>Điều Khoảng Sử Dụng</dt>
+                    <dt>Điều Khoảng Sử Dụng (VNG)</dt> <!-- các phần tử trong danh sách -->
+                    <dt>Tùy chọn Cookies</dt>
+                </dl>
+            </div>
+        </footer>
+
+        <script src="script.js"> </script> <!-- đường dẫn liên kết đến phần js của trang -->
+    </body>
+</html>

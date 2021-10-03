@@ -1,0 +1,170 @@
+*{
+    box-sizing: border-box;  /* dạng bố cục trang web là một dạng hộp */
+}
+body{
+    background-image: url(img-web/background2.jpg);  /* hình nền trong phần body web */
+}
+header{  
+    padding-bottom: 5px;  /* nội dung phần header cách lề bot là 5px */
+    border-bottom:2px solid rgb(248, 242, 242) ;  /* đường gạch chân dưới bottom là một đường thẳng   */
+    margin: 2%;  /* bố cục thẻ toàn thể là 2% so với thẻ body */
+    background-color: #810fec;  /* màu nền */
+}
+.content{
+    display: flex;  /* hiển thị phần tử dạng linh động trang web  */
+    padding: 2% 6%;  /* nội dung trong thẻ cách top bot là 2% và left right là 6% so với thẻ header */
+    justify-content: space-between;  /* căn giữa không gian những nội dung phần tử */
+    align-items: center;  /* từng phần tử căn giữa */
+}
+.content img{  /* phần hình ảnh trong thẻ content */
+    width: 150px;  /* độ rộng hình ảnh logo chiếm 150px thẻ content */
+}
+.menu{  /* phần menu trong thẻ menu*/
+    flex: 1;
+    text-align: right;  /* phần tử trong thẻ căn giữa */
+}
+.menu ul li {  /* các phần tử trong menu  */
+    list-style: none;  /* xóa phần chỉ mục trong danh sách  */
+    display:inline-block;  /* hiển thị dạng danh sach theo chiều ngang */
+    padding: 5px 30px;  /* nội dung phần tử cách top bot là 5px và left right là 30px */
+    position: relative;  /* vị trí các phần tử menu sẽ thay đổi nhưng không chiếm vùng nhớ các phần khác */
+}
+.menu ul li :hover{  /* phần hover các phần tử  */
+    color: #e24c3c;  /* màu sắc khi hover phần tử */
+}
+.menu ul li a{  /* phần nội dung từng phần tử menu */
+    text-decoration: none;  /* xóa phần gạch chân mặc định liên kết trang */
+    font-family:Arial, Helvetica, sans-serif;  /* phông chữ */
+    text-transform: uppercase;  /* in hoa các phần tử */
+    text-decoration: none;  /* xóa phần chỉ mục của danh sách  */
+    color: rgb(255, 242, 242); /* màu chữ  */
+    font-size: 15px;   /* cỡ chữ */
+}
+
+main{  /* phần nội dung  */
+    display: flex;  /* hiển thị linh động nội dung các phần tử theo trang web */
+    align-items: center;  /* căn giữa các phần tử */
+    justify-content: center;  /* cách đều khoảng cách phần tử  */
+    min-height: 100vh;  /* căn chỉnh nội dung nằm giữa theo chiều cao trong thẻ body */
+    margin: 0;  /* bố cục toàn thể là 0 */
+    padding-top: 100px;  /* nội dung cách lề top là 100px */
+    position: relative;  /* vị trí khi thay đổi phần tử không làm ảnh hưởng đến phần tử khác */
+
+}
+.container{  /* phần chứa  form đăng ký */
+    background-color: white;  /* màu nền  */
+    border-radius: 10px;  /* khung viền tròn  */
+    overflow: hidden;  /* che các text bị tràn  */
+    box-shadow: 0 2px 5px rgb(0, 0, 0,0.3);  /* đổ bóng cho thẻ */
+    width: 400px;  /* độ rộng thẻ */
+    max-width: 100%;  /* độ rộng tối đa theo thẻ  */
+}
+.container h2 {  /* phần tiêu đề nội dung trong thẻ*/
+    padding: 20px 40px;  /* nội dung cách top và bot là 20px và left right là 40px */
+    text-align: center;  /* căn giữa các phần tử trong thẻ  */
+    font-size:35px;  /* kích cỡ chữ */
+    color: #810fec;  /* màu chữ */
+}
+.form {  /* thẻ form đăng ký  */
+    padding: 30px 40px;
+}
+.form-control {  /* các thẻ chứa nội dung trong form */
+    margin-bottom: 10px;  /* bố cục cách lề bot của thẻ là 10px */
+    padding-bottom: 20px;  /* nội dung cách lề bot của thẻ là 20px */
+    position: relative;  /* vị trí của thẻ không ảnh hưởng các phần tử khác */
+}
+.form-control label{  /* phần label form */
+    display: inline-block;  /* hiển thị dạng ngang chiếm hết không gian trên cùng dòng */
+    margin-bottom: 5px;  /* bố cục cách lề bot của thẻ là 5px */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  /* phông chữ */
+}
+.form-control input{  /* phần thông tin nhập vào */
+    border: 2px solid #f0f0f0;  /* tạo khung cho thẻ input */
+    border-radius: 4px;  /* điều chỉ khung viền */
+    display: block;  /* hiển thị dạng khác dòng */
+    font-family: inherit;  /* phông chữ  */
+    font-size:14px;  /* cỡ chữ */
+    padding: 10px;  /* nội dung tổng thể của trong thẻ */
+    width: 100%;  /* độ rộng input 100% so với thẻ  */
+}
+
+
+.form-control input:focus {  /* khi nhấp vào phần input */
+	outline: 0;  /* phần viền gạch chân 0  */
+	border-color: #777;  /* khung thay đổi màu */
+}
+
+.form-control.success input {  /* khi thành công input đầu vào */
+	border-color: #2ecc71;  /* khung viền thay đổi */
+}
+
+.form-control.error input {  /* khi sai input đầu vào */
+	border-color: #e74c3c;  /* khung vien thay đổi màu */
+}
+
+.form-control small{  /* phần thông báo khi lỗi */
+    position: absolute;  /* vị trí phần tử tuyết đối không thay đổi */
+    color: #e74c3c;  /* màu chữ */
+    bottom: 0;  /* cách lề bot là 0  */
+    left: 0;  /* cách lề trái là 0 */
+    visibility: hidden;  /* giấu đi nếu không có lỗi */
+}
+/*-------------note---------*/
+.form-control.error small {
+	visibility: visible;  /* show khi báo lỗi */
+}
+.form button{  /* nút submit button */
+    background-color: #810fec;  /* màu nền thẻ */
+    border:2px solid #810fec;  /* khung viền */
+    color: white;  /* màu chữ */
+    display: block;  /* hiển thị dạng dòng mới */
+    font-family: inherit;  /* phông chữ */
+    font-size: 18px;  /* cỡ chữ */
+    padding: 10px;  /* nội dung phần tử trong thẻ */
+    width: 100%;  /* độ rông chiếm 100% so với thẻ form */
+}
+
+.check{ /* phần checkbox */
+    padding-bottom: 30px;   /* nội dung bên trong cách bot là 30px */
+}
+.check a{  /* link đường dẫn */
+    text-decoration: none;  /* xóa phần gạch chân đường dẫn */
+}
+footer{  /* phần footer */
+    margin: -8px;  /* bố cục toàn thể mở rông thêm 8px so với lề */
+}
+.rear{  /* nội dung trong thẻ footer */
+    color: white;  /* màu chữ */
+    background-color: #000;  /* màu nền */
+    margin-top: 100px;  /* bố cục cách lề top của thẻ là 100px */
+    text-align: center;  /* đoạn text nằm giữa */
+    padding-bottom: 2%;  /* phần nội dung cách lề bot của thẻ là 2% so với thẻ footer */
+    font-family: Arial, Helvetica, sans-serif;  /* phông chữ */
+    font-size: small;  /* cỡ chữ */
+}
+ /* hiển thị theo giao diện */
+@media(max-width: 750px){
+    header{  /* phần header */
+        position: relative;  /* vị trí không ảnh hưởng phần tử khác khi thay đổi */
+        background-color: #e74c3c;  /* thay đổi màu nền header */
+    }
+    main{  /* phần nội dung */
+        text-align: center;  /* nội dung text căn giữa */
+    }
+    .container h2{  /* thẻ h2 trong container trong thẻ main */
+        color: #e74c3c;  /* thay đổi màu chữ */
+    }
+    .menu ul li a{  /* các phần tử trong menu  */
+        color: #080808;  /* thay đổi màu chữ */
+    }
+    .form button{  /* nút submit buttob */
+        background-color: #e74c3c;  /* màu nền */
+        border: #e74c3c;  /* khung viền nút */
+    }
+    footer{  /* phần footer */
+        position: sticky;  /* vị trí cố định  */
+    }
+    .menu ul li :hover{  /* khi hover chuột vào phần tử  */
+        color: #f0f0f0;  /* thay đổi màu chữ */
+    }
+}

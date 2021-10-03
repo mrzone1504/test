@@ -1,0 +1,273 @@
+*{
+    margin:0; /* căn chỉnh bố cục trang web */
+    padding: 0; /* căn chỉnh nội dung trang web */
+    font-family:'Roboto', sans-serif; /* phông chữ cho toàn cục  */
+}
+.container{
+    width: 100%; /* độ rộng phần nội dung chiếm 100% so với thẻ header */
+    min-height: 100vh; /* độ cao chiếm ở giữa trong nội dung thẻ header */
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img-web/background1.jpg); /* ảnh nền phần header */
+    background-position: center; /* vị trí ảnh nằm ở trung tâm */
+    background-size: cover; /* kích thước co giãn theo trang web */
+    position: relative; /* có thể dịch chuyển phần tử không ảnh hưởng nội dung khác */
+}
+nav{
+    display: flex; /* hiển thị theo dạng linh động trang web */
+    padding: 2% 6%; /* nội dung cách lề top và bot là 2% thẻ header và chiếm left và right là 6% thẻ header */
+    justify-content: space-between; /* tạo không gian cho các phần tử header */
+    align-items: center; /* căn giữa các phần tử trong thẻ header */
+}
+nav img{
+    width: 150px; /* độ rộng ảnh */
+}
+.nagative{
+    flex: 1; /* thu gọn vùng sao cho các phần tử bằng nhau */
+    text-align: right; /* các phần tử navigation nằm bên phải nav */
+}
+.nagative ul li{
+    list-style: none; /* xóa nút mặc định của danh sách phần tử */
+    display:inline-block; /* hiển thị danh sách navigation theo chiều ngang */
+    padding: 5px 30px; /* nội dung trong cách top và bot là 5px left và right là 30px trong thẻ ul */
+    position: relative;  /* có thể dịch chuyển phần tử không ảnh hưởng nội dung khác */
+}
+.nagative ul li a{
+    text-decoration: none; /* xóa phần mặc định gạch chân của danh sách  */
+    text-transform: uppercase; /* in hoa các phần tử */
+    font-weight: 600px; /* độ đậm của chữ */
+    color: rgb(189, 166, 63); /* màu sắc chữ */
+    font-size: 15px; /* kích thước */
+}
+.nagative ul li::after{ /* kẻ đường inline dưới các phần tử */
+    content: '';  /* chèn nội dung rỗng */
+    width: 0%; /* độ rộng */
+    height: 1px; /* độ cao */
+    background: #f44336; /* màu sắc */
+    display: block; /* hiển thị khác dòng so với phần tử ul li (navigation) */
+    margin: auto; /* bố cục nội dung tùy chỉnh */
+    transition: 0.5s; /* biến đổi sau thời gian 0.5 giây */
+}
+.nagative ul li:hover::after{ /* khi đưa chuột vào phần tử */
+    width: 100%; /* độ rộng 100% so với các phần tử navigation */
+}
+.content{
+    width: 90%; /* độ rộng nội dung phần header chiếm 90% so với thẻ header */
+    color: #fff; /*  màu chữ trắng */
+    position: absolute; /* vị trí tuyệt đối không thay đổi */
+    top: 55%; /* cách top 55% thẻ header */
+    left: 50%; /* cách trái 50% thẻ header*/
+    transform: translate(-50%,-50%); /* nội dung thẻ nằm vị trí trung tâm header*/
+    text-align: center; /* các phần tử trong nội dung căn giữa */
+}
+.content h1{
+    font-size: 62px; /* độ cỡ chữ tiêu đề header trong phần nội dung */
+    font-weight: bold; /* in đậm chữ */
+    text-transform: uppercase; /* viết hoa toàn bộ trong h1 */
+    font-family: cursive; /* phông chữ */
+    color: #15dfdf; /* màu chữ */
+}
+.content p{
+    font-size: 14px; /* cỡ chữ trong nội dung văn bản header */
+    padding-top: 20px; /* nội dung cách trong thẻ cách lề top 20px */
+    font-family: Arial, Helvetica, sans-serif; /* phông chữ thẻ p */
+}
+button{
+    width: 200px; /* độ rộng nút button */
+    padding: 15px 0; /* nội dung thẻ cách top và bot là 15px left và right là 0 */
+    text-align: center; /* nội dung trong thẻ căn giữa */
+    margin: 40px 20px 0px 20px; /* phần bố cục thẻ cách top 40px right 20px bot 0px và left 20px */
+    border-radius: 25px; /* khung nút button là khung tròn với độ tròn là 25px */
+    font-weight: bold; /* độ đậm chữ nội dung trong thẻ*/
+    border: 2px solid rgb(240, 240, 228); /* tạo khung chứa nội dung  */
+    background: transparent; /* độ trong của nề nút button */
+    background-color: #ee3528; /* màu nền nút  */
+    color: rgb(250, 250, 250);/* màu chữ */
+    cursor: pointer; /* thay đổi chỉ thị chuột */
+    position: relative; /* vị trí dịch chuyển không thay đổi phần tử khác */
+}
+button:hover{ /* biến đổi khi đưa chuột vào phần tử */
+    border: 1px solid rgb(236, 227, 227);  /* khung thay đổi thành màu trắng */
+    background: rgb(236, 229, 229); /* nền thay đổi thành màu trắng */
+    transition: 1s;/* thời gian hover là 1s sau khi đưa chuột vào */
+    color: black; /* màu chữ thay đổi */
+}
+
+
+nav .fa{
+    display: none; /* phần tử bị che đi khi gọi js */
+}
+/*UI trên thiết bị di động*/
+@media(max-width: 700px){
+    .content h1{
+        font-size: 40px; /* phông cỡ chữ thay đổi thành 40px */
+    }
+    .content p{
+        font-size: 10px; /* cỡ chữ thay đỗi thành 10px */
+        margin: 10px 0 40px; /* bố cục thay đổi */
+    }
+    .nagative ul li{
+        display: block; /* vị trí phần tử chiếm hết vùng ngang trong thẻ ul */
+    }
+    .nagative{
+        position: absolute; /* vị trí thanh điều hướng thành tuyệt đối  */
+        background: #f44336; /* màu nền */
+        height: 100vh; /* độ cao trong thẻ */
+        width: 200px; /* độ rộng */
+        top: 0; /* cách lể top 0 */
+        right: 0; /* cách lề phải */
+        text-align: left; /* căn chỉnh nội dung nằm bên trái */
+        z-index: 2; /* hiển thị nổi nội dung trên phần nền */
+        transition: 1s; /* thời gian biến đổi phương thức trên là 1 giây */
+    }
+    nav .fa{
+        display: block; /* hiển thị dạng block chiếm hết vùng ngang */
+        color: #fff; /* màu chữ là trắng */
+        margin: 10px; /* bố cục tổng thể cách 10px */
+        font-size: 22px; /* cỡ chữ */
+        cursor: pointer; /* thay đổi chỉ thị chuột */
+    }
+    .nagative ul{
+        padding: 30px; /* các phần tử danh sách cách lể tổng thể là 30px thẻ nagative */
+    }
+}
+/* phần banner */
+.mainp0{ /* nội dung thứ nhất trong main */
+    display: flex; /*hiển thi dạng linh động phần tử theo màn hình */
+    width: 100%; /*độ rộng là 100% so với thẻ main */
+    background: rgb(98, 197, 236); /* màu nền */
+    margin-top: 6%; /* bố cục cách lề top 6% */
+
+}
+.col-1, .col-2{ /* bố cục trong nội dung 1 gồm 2 phần tử */
+    flex-basis: 50%; /* gồm 2 phần tử chiếm không gian 50% trong thẻ mainp0 */
+    overflow: hidden; /* che đi các vị trí thừa */
+}
+.col-2 img{ /* phần tử thứ 2 chứa hình ảnh */
+    width: 100%; /* độ rộng ảnh là 100% so với thẻ col-2 */
+    border: solid 5px red;/* khung viền là đường thẳng */
+    margin-top: 100px; /*bố cục cách top 100px*/
+}
+.col-1{
+    padding: 10% 5%; /* phần tử thứ 1 phần nội dung cách top và bot 10% và left right 5% so voi thẻ mainp0 */
+}
+.col-1 h1{ /* phần tiêu đề trong nội dung thứ 1 */
+    font-size: 60px; /* cỡ chữ là 60px */
+    color: #0a4f53;/* màu chữ */
+    line-height: 80px; /* chiều cao giữa các dòng */
+    letter-spacing: 2px; /* khoảng cách ký tự trong thẻ */
+}
+.col-1 p{ /* phần văn bản */
+    color: #fff; /* màu chữ */
+    line-height: 22px; /* chiều cao giữa các dòng*/
+    margin: 15px 0 30px; /* bố cục phần văn bản */
+}
+@media(max-width:700px){
+    .mainp0{
+        flex-direction: column; /*hiển thị theo dạng cột trên thiết bị*/
+        text-align: center; /*nội dung phần tử căn giữa */
+    }
+}
+
+/* phần tin tức*/
+.mainp1{ /* nội dung thứ hai trong thẻ main */
+    width: 90%; /* độ rộng thẻ chiếm 90% so với thẻ main */
+    margin: auto; /* bố cục tùy chỉnh */
+    text-align: center; /* nội dung phần tử căn giữa */
+    padding-top: 100px; /* nội dung phần tử cách top 100px */
+    
+}
+.mainp1 h1{ /* tiêu đề trong nội dung thứ hai trong thẻ main  */
+    font-size: 50px; /* cỡ chữ*/
+    font-weight: 600;/* in đậm chữ */
+    font-family:'Times New Roman', Times, serif; /* phông chữ */
+    color: #ee3528; /* màu chữ */
+
+}
+.mainp1 p{ /* phần nội dung văn bản trong mainp1*/
+    color: rgb(0, 0, 0); /* màu chữ */
+    font-size: 15px; /* cỡ chữ */
+    font-weight: 300;/* độ đậm chữ */
+    line-height: 22px; /* chiều cao giữa các dòng */
+    padding: 10px; /* nội dung phần tử toàn thể 10px */
+}
+.row{ /* chứa các cột nội dung bên trong */
+    margin-top: 8%;  /* bố cục cách lề top là 8% so với mainp1 */
+    display:flex; /* hiển thị linh động theo trang web */
+    justify-content: space-between; /* khoảng cách các phần tử */
+}
+.mainp1-sol{ /* phần tử trong row */
+    flex-basis: 32%; /* chiếm không gian có sẵn là 32% của từng phần tử */
+    background: rgb(98, 197, 236); /* nền trong thẻ   */
+    border-radius: 10px; /* điều chỉnh phần khung viền  */
+    margin-bottom: 5%;  /* bố cục thẻ cách lề dưới 5% so với thẻ row  */
+    padding: 20px 18px;  /* nội dung bên trong cách top bot là 20px và left right 18px */
+    box-sizing:border-box;  /* kích cỡ thẻ là một dạng khung hộp */
+}
+.mainp1-sol h3{  /* tiêu đề từng thẻ bên trong */
+    text-align: center;  /* vị trí chữ trong thẻ h3 nằm trung tâm */
+    font-weight: 600;  /* độ đậm chữ */
+    margin: 10px 0;  /* bố cục thẻ h3 cách top bot là 10px và left right là 0 */
+}
+.img1{
+    width:100%;  /* hình ảnh trong thẻ mainp1-sol */
+    cursor: pointer;  /* thay đổi chỉ thị chuột */
+}
+.mainp1-sol:hover{  /* phần khi hover chuột vào phần tử */
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);  /* đổ bóng cho phần tử */
+}
+
+@media(max-width:700px){
+    .row{
+        flex-direction: column;  /* thay đổi phần tử trong nội dung thứ hai trong main thành dạng cột */
+    }
+}
+/* chọn tướng */
+.mainp2{  /* phần nội dung thứ 3 trong thẻ main */
+    width: 90%;  /* độ rộng chiếm 90% nội dung thẻ main */
+    margin: auto;  /* bố cục tùy chỉnh */
+    text-align: center;  /* nội dung căn giữa */
+    padding-top:100px;  /* nội dung cách lề trên 100px */
+}
+.mainp2 h1{  /* tiêu đề phần nội dung thứ 3 */
+    font-size: 50px;  /* cỡ chữ  */
+    font-weight: 600;  /* độ đậm chữ */
+    font-family:'Times New Roman', Times, serif;  /* phông chữ */
+    color: #ee3528;  /* màu chữ */
+
+}
+.mainp2-sol{  /* các thành phần trong nội dung thứ 3 trong thẻ main */
+    flex-basis: 32%;  /* mỗi phần tử chiếm 32% so với thẻ row không gian vùng nhớ */
+    border-radius: 10px;  /* khung viền tròn */
+    margin: 2%;  /* bố cục toàn thể của thẻ cách 2% so vối row */
+    background: rgb(37, 135, 173);  /* phần màu nền trong thẻ */
+    text-align: center;  /* vị trí nội dung bên trong thẻ căn giữa */
+    color: #fff;  /* màu chữ  */
+}
+.mainp2 img{  /* phần hình ảnh trong thẻ */
+    width: 100%;  /* độ rộng hình ảnh là 100% so với thẻ mainp2 */
+    border-radius: 10px;  /* khung viền border cạnh tròn  */
+    cursor: pointer;  /* thay đổi chỉ thị chuột */
+}
+.mainp2-sol p{ /* phần chú thích văn bản trong thẻ */
+    padding: 0;  /* nội dung cách toàn thể là 0 */
+}
+.mainp2-sol h3{  /* tiêu đề phụ trong thẻ  */
+    margin-top: 15px;  /* bố cục thẻ h3 cách lề top là 15px */
+    margin-bottom: 15px;  /* bố cục cách lề bot là 15px */
+}
+.mainp2-sol:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,1);  /* đổ bóng cho từng thẻ  */
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;  /* hiển thị nội dung thứ 3 theo dạng cột trên thiết bị */
+    }
+}
+.rear{  /* phần footer trang */
+    color: white;  /* màu chữ */
+    background-color: #000;  /* màu nền */
+    margin-top: 100px;  /* bố cục cách lề top 100px */
+    text-align: center;  /* nội dung phần tử trong thẻ căn giữa */
+    padding-bottom: 5%;  /* nội dung trong thẻ cách lề bot là 5% so với thẻ footer */
+    font-family: Arial, Helvetica, sans-serif;  /* phông chữ  */
+    font-size: small;  /* cỡ chữ  */
+}
